@@ -7,13 +7,12 @@ app.listen(port, () => console.log(`Example app listening at http://localhost:${
 
 //Endpoint to get list of stores
 app.get('/stores', (req, res) => { //req=request,res=response
-  getListOfStores('diledb', 'stores') //call function to return list of stores
+  getListOfCollection('diledb', 'stores') //call function to return list of stores
     .then((result) => res.status(200).json(result)) //response=200 is ok
     .catch((err) => res.status(500).send(err)); //response=500 there is an error
 });
 
-
-getListOfStores = (dbName, collectionName) => {
+getListOfCollection = (dbName, collectionName) => {
   //get the url to connect to Mongodb
   const getDbUrl = require('./getDbUrl');
 
