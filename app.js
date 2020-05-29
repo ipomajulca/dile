@@ -1,7 +1,7 @@
 //This app starts a server and listens on port 3000 for connections
 const express = require('express') //get express
 const app = express() //our app    
-const port = 3000 //port to use
+const port = 3001 //port to use
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
 
