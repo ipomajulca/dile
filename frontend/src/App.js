@@ -48,15 +48,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1> Stores </h1>
+        {/* <h1> Stores </h1>
         <ul>
   
           {this.state.stores.map((store) => (
             <li key={store._id}> {store.name} </li>
           ))}
-        </ul>
-        <div className="sidebarStyle"></div>
-        <div ref={(el) => (this.mapContainer = el)} className="mapContainer" />
+        </ul> */}
+{/*         <div className="sidebarStyle"></div> */}  
+      <div ref={(el) => (this.mapContainer = el)} className="mapContainer" />
       </div>
     );
   }
