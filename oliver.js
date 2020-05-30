@@ -1,15 +1,15 @@
 //This app starts a server and listens on port 3000 for connections
 const express = require("express"); //get express
 const app = express(); //our app
-const port = 3001; //port to use
+const port = 300; //port to use
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
 
 //Endpoint to get list of stores
-app.get("/stores", (req, res) => {
+app.get("/items", (req, res) => {
   //req=request,res=response
-  getListOfCollection("diledb", "stores") //call function to return list of stores
+  getListOfCollection("diledb", "items") //call function to return list of items
     .then((result) => res.status(200).json(result)) //response=200 is ok
     .catch((err) => res.status(500).send(err)); //response=500 there is an error
 });
