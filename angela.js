@@ -6,8 +6,8 @@ app.listen(port, () => console.log(`Example app listening at http://localhost:${
 
 
 //Endpoint to get list of stores
-app.get('/items', (req, res) => { //req=request,res=response
-  getListOfCollection('diledb', 'items') //call function to return list of stores
+app.get('/food', (req, res) => { //req=request,res=response
+  getListOfCollection('diledb', 'food') //call function to return list of stores
     .then((result) => res.status(200).json(result)) //response=200 is ok
     .catch((err) => res.status(500).send(err)); //response=500 there is an error
 });
